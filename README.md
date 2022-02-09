@@ -1,18 +1,25 @@
-# Salesforce DX Project: Next Steps
+![APEX Built with Love](https://cdn.rawgit.com/Dani3lSun/apex-github-badges/7919f913/badges/apex-love-badge.svg)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+# Scenario: Pricing 
 
-## How Do You Plan to Deploy Your Changes?
+A food company is dealing with problems related to the product pricing which refers to the price margin analysis of their products. To solve this question, the company decided to implement a CRM (Customer relationship management) and hired a consultancy to help them in the process. The project's goal is to make a robust and unique system to the number one selling consumer goods company.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+_Guided Project by PragmaSchool._
 
-## Configure Your Salesforce DX Project
+## Margin
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+The price margin is visible in the products' prices and has the following specifying structure:
 
-## Read All About It
+1. Products: Product and Product Hierarchy.
+2. Clients: Client and Accounts Group.
+3. Distribution: Distribuion Center and Distribution Center's State.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+The system just allows the margin's insertion if it has at least one attribute of each category filled. If not it should show the message "Fill correctly the margin's specifying structure". The prioritizing order follows
+
+1. Product (2000 points) > Product Hierarchy (1000)
+2. Client (200) > Clients Group (100)
+3. Distribution Center (20) > State (10) 
+
+# Instructions to use
+
+**First Step:** To implement this code into your Salsforce Org, please review he Data Modeling [here](). Install Salesforce CLI, using [these]() instructions and use the Salesforce CLI Integration VS Code extension, and also verify if Java is installed on your machine.
